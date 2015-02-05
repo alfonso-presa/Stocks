@@ -38,4 +38,4 @@ after_script:
   - yes | git push heroku master
 env:
   global:
-    secure: HEROKU_API_KEY=FV3yXkEs8Xj+Pf0QMxDL+v6+V0Z0BWW6NbC2zSoXoeYlYzoszoMSGbvh07PR8PBx7OnvB8qa5LZULVx/1ni4SChSqM7Un/75QRGRkbV0jPYjNGkcizNc4UIzw0QYaKxaywB9ur7kmm0B9EPvhCm57E6r10TBuRsukxxhmuhZZLw=
+    secure: "Qr308X2YCAWrVWITjEWyDBEHcOklIjRgkng61iEQmjDadSp4zNuwkllKCWrYE+s2kXNTcn9t2imUFXW653jmeJk3N6kOi3y998V0s1t+tr19CO946yEgYdie1gWq83hEzcBt/qFL0m62i4/tTE50qzb5tu7mxBitQje8GHuVjHU="
