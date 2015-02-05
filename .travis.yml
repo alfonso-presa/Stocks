@@ -27,9 +27,9 @@ after_success:
   - grunt build
   # Commit and Push dist folder to Heroku
   - cd dist
-  - git add *
+  - git add * -f
   - git commit -am "Travis CI"
-  - git push origin master
+  - git push heroku master
 env:
   global:
     secure: HEROKU_API_KEY=g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
