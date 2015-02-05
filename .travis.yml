@@ -10,5 +10,6 @@ services: mongodb
 deploy:
   provider: heroku
   username: alfonso.presa@gmail.com
-  api_key: g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
   app: stocks-alfonso-presa
+  api_key:
+    secure: g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
