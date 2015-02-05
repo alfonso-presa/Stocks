@@ -16,6 +16,9 @@ services: mongodb
 #    secure:
 after_script:
   # Install the Heroku package (or the Heroku toolbelt)
+  - npm install
+  - bower install
+  - grunt
   - npm install heroku
   # Download and install Heroku toolbelt locally
   - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
@@ -33,6 +36,8 @@ after_script:
   - git remote add heroku git@heroku.com:stocks-alfonso-presa.git
   - cd dist
   - git add * -f
+  - git config --global user.email "alfonso.presa@gmail.com"
+  - git config --global user.name "Alfonso Presa"
   - git commit -m "Travis CI"
   # Push to Heroku!
   - yes | git push heroku master
