@@ -29,7 +29,8 @@ after_script:
   # Add a new SSH key to Heroku
   - yes | heroku keys:add
   # Add your Heroku git repo:
-  - heroku git:remote -a stocks-alfonso-presa
+  #- heroku git:remote -a stocks-alfonso-presa
+  - git remote add heroku git@heroku.com:stocks-alfonso-presa.git
   - cd dist
   - git add * -f
   - git commit -m "Travis CI"
