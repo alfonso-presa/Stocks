@@ -1,9 +1,14 @@
 language: node_js
 node_js:
-  - '0.10'
-  - '0.11'
+- '0.10'
+- '0.11'
 before_script:
-  - npm install -g bower grunt-cli
-  - gem install sass
-  - bower install
+- npm install -g bower grunt-cli
+- gem install sass
+- bower install
 services: mongodb
+deploy:
+  api_key:
+    username: alfonso.presa@gmail.com
+    secure: g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
+    app: stocks-alfonso-presa
