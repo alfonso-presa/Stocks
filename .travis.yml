@@ -13,7 +13,7 @@ services: mongodb
 #  app: stocks-alfonso-presa
 #  skip_cleanup: true
 #  api_key:
-#    secure: g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
+#    secure:
 after_script:
   # Install the Heroku package (or the Heroku toolbelt)
   - npm install heroku
@@ -37,4 +37,4 @@ after_script:
   - yes | git push heroku master
 env:
   global:
-    secure: HEROKU_API_KEY=g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
+    secure: HEROKU_API_KEY=FV3yXkEs8Xj+Pf0QMxDL+v6+V0Z0BWW6NbC2zSoXoeYlYzoszoMSGbvh07PR8PBx7OnvB8qa5LZULVx/1ni4SChSqM7Un/75QRGRkbV0jPYjNGkcizNc4UIzw0QYaKxaywB9ur7kmm0B9EPvhCm57E6r10TBuRsukxxhmuhZZLw=
