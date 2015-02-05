@@ -19,8 +19,6 @@ after_script:
   - npm install heroku
   # Download and install Heroku toolbelt locally
   - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-  # Add your Heroku API key:
-  - export HEROKU_API_KEY=g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
   # Turn off warnings about SSH keys:
   - echo "Host heroku.com" >> ~/.ssh/config
   - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
@@ -37,3 +35,6 @@ after_script:
   - git commit -m "Travis CI"
   # Push to Heroku!
   - yes | git push heroku master
+env:
+  global:
+    secure: HEROKU_API_KEY=g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
