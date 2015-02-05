@@ -7,29 +7,10 @@ before_script:
 - gem install sass
 - bower install
 services: mongodb
-cache:
-  bundler: true
-  directories:
-    - node_modules
-after_success:
-  # Turn off warnings about SSH keys:
-  - echo "Host heroku.com" >> ~/.ssh/config
-  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-  - echo "   CheckHostIP no" >> ~/.ssh/config
-  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-  # Clear your current Heroku SSH keys:
-  - heroku keys:clear
-  # Add a new SSH key to Heroku
-  - yes | heroku keys:add
-  # Clone Heroku deployment repo to dist folder
-  - heroku git:clone -a stocks-alfonso-presa
-  # Build
-  - grunt build
-  # Commit and Push dist folder to Heroku
-  - cd dist
-  - git add * -f
-  - git commit -am "Travis CI"
-  - git push heroku master
-env:
-  global:
-    secure: HEROKU_API_KEY=g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
+deploy:
+  provider: heroku
+  username: alfonso.presa@gmail.com
+  app: stocks-alfonso-presa
+  skip_cleanup: true
+  api_key:
+    secure: g2rkFeRYO1ohBrDUCjbj0++z/yhNyvnBVwNWlcCWRmIvLAanrwSjSq15OVDQjmRvy9mS5vlJTrEH7ozEEs0Upk2wVIRjKIbU3WsUXN3ppp7TxMrMTywqby6cHEsU/95BRYfjNyK2EXRieYh4wvKKNWzL50mn6Ex4zgTBYuByBSs=
