@@ -9,7 +9,7 @@ before_script:
 - bower install
 - grunt
 services: mongodb
-before_deploy: "grunt"
+before_deploy: "grunt && rm .gitignore"
 deploy:
   provider: heroku
   username: alfonso.presa@gmail.com
