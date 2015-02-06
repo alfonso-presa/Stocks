@@ -3,44 +3,46 @@ node_js:
 - '0.10'
 - '0.11'
 before_script:
+- npm install
 - npm install -g bower grunt-cli
 - gem install sass
 - bower install
+- grunt
 services: mongodb
-#deploy:
-#  provider: heroku
-#  username: alfonso.presa@gmail.com
-#  app: stocks-alfonso-presa
-#  skip_cleanup: true
-#  api_key:
-#    secure:
-after_script:
-  # Install the Heroku package (or the Heroku toolbelt)
-  - npm install
-  - bower install
-  - grunt
-  - npm install heroku
-  # Download and install Heroku toolbelt locally
-  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-  # Turn off warnings about SSH keys:
-  - echo "Host heroku.com" >> ~/.ssh/config
-  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-  - echo "   CheckHostIP no" >> ~/.ssh/config
-  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-  # Clear your current Heroku SSH keys:
-  - heroku keys:clear
-  # Add a new SSH key to Heroku
-  - yes | heroku keys:add
-  # Add your Heroku git repo:
-  #- heroku git:remote -a stocks-alfonso-presa
-  - git remote add heroku git@heroku.com:stocks-alfonso-presa.git
-  - cd dist
-  - git add * -f
-  - git config --global user.email "alfonso.presa@gmail.com"
-  - git config --global user.name "Alfonso Presa"
-  - git commit -m "Travis CI"
-  # Push to Heroku!
-  - yes | git push heroku master
-env:
-  global:
-    secure: "Qr308X2YCAWrVWITjEWyDBEHcOklIjRgkng61iEQmjDadSp4zNuwkllKCWrYE+s2kXNTcn9t2imUFXW653jmeJk3N6kOi3y998V0s1t+tr19CO946yEgYdie1gWq83hEzcBt/qFL0m62i4/tTE50qzb5tu7mxBitQje8GHuVjHU="
+deploy:
+  provider: heroku
+  username: alfonso.presa@gmail.com
+  app: stocks-alfonso-presa
+  skip_cleanup: true
+  api_key:
+    secure: "ofBcjUplzZlShnVTn5qxQAoghuBISFV+xXiPd9/5wIuWodLT1Lor43p6fiLTF1z95kQpVPg3m7czRGOCZtuU3yajWtFeMiqaLiyLBPQcXo42iqJiKFtV02GbpVm8q5FAKQiOYRJhNY8Z+GMurAR/nSVtcnhkP0GokCPdIkiBZg8="
+#after_script:
+#  # Install the Heroku package (or the Heroku toolbelt)
+#  - npm install
+#  - bower install
+#  - grunt
+#  - npm install heroku
+#  # Download and install Heroku toolbelt locally
+#  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+#  # Turn off warnings about SSH keys:
+#  - echo "Host heroku.com" >> ~/.ssh/config
+#  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+#  - echo "   CheckHostIP no" >> ~/.ssh/config
+#  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+#  # Clear your current Heroku SSH keys:
+#  - heroku keys:clear
+#  # Add a new SSH key to Heroku
+#  - yes | heroku keys:add
+#  # Add your Heroku git repo:
+#  #- heroku git:remote -a stocks-alfonso-presa
+#  - git remote add heroku git@heroku.com:stocks-alfonso-presa.git
+#  - cd dist
+#  - git add * -f
+#  - git config --global user.email "alfonso.presa@gmail.com"
+#  - git config --global user.name "Alfonso Presa"
+#  - git commit -m "Travis CI"
+#  # Push to Heroku!
+#  - yes | git push heroku master
+#env:
+#  global:
+#    secure: "Qr308X2YCAWrVWITjEWyDBEHcOklIjRgkng61iEQmjDadSp4zNuwkllKCWrYE+s2kXNTcn9t2imUFXW653jmeJk3N6kOi3y998V0s1t+tr19CO946yEgYdie1gWq83hEzcBt/qFL0m62i4/tTE50qzb5tu7mxBitQje8GHuVjHU="
