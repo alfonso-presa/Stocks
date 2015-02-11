@@ -1,0 +1,37 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Your portfolio</h1>
+    <p class="lead">Manage your portfolio</p>
+  </div>
+</header>
+
+<div class="container portfolios">
+  <div class="row">
+    <div class="col-lg-12">
+      <form>
+        <div class="form-group">
+          <label for="stockName">Stock name</label>
+          <input type="text" class="form-control" id="stockName" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="stockSymbol">Stock symbol</label>
+          <input type="text" class="form-control" id="stockSymbol" placeholder="Enter symbol">
+        </div>
+
+        <div class="form-group">
+          <label for="stcokAmount">Amount</label>
+          <input type="number" id="stcokAmount">
+          <p class="help-block">Input the amount of stocks you have.</p>
+        </div>
+        <button class="btn btn-default">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+  </div>
+</footer>

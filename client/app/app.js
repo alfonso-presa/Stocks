@@ -12,7 +12,7 @@ angular.module('stocksApp', [
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
-    $httpProvider.interceptors.push('authInterceptor');
+    //$httpProvider.interceptors.push('authInterceptor'); TODO: Enable Auth
   })
 
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
