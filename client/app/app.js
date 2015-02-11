@@ -7,7 +7,7 @@ angular.module('stocksApp', [
   'ui.router',
   'ui.bootstrap'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
       .otherwise('/');
 
