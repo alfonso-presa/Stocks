@@ -8,6 +8,8 @@ before_script:
 - gem install sass
 - bower install
 - grunt
+notifications:
+  email: false
 services: mongodb
 before_deploy: "rm .gitignore"
 deploy:
