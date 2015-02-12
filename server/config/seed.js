@@ -5,8 +5,17 @@
 
 'use strict';
 
+var Stock = require('../api/portfolio/stock.model');
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+
+Stock.find({}).remove(function(){
+  Stock.create(
+    {name: "Santander", symbol: "san", amount: 100, portfolio: 1},
+    {name: "Telefonica", symbol: "tel", amount: 150, portfolio: 1},
+    {name: "L'Oreal", symbol: "lor", amount: 200, portfolio: 1}
+  )
+});
 
 Thing.find({}).remove(function() {
   Thing.create({
