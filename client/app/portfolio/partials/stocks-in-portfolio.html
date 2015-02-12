@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Your portfolio</h3>
+  </div>
+  <div class="panel-body">
+    <table id="stocks-table" class="table">
+      <thead>
+      <tr>
+        <th>name</th>
+        <th>symbol</th>
+        <th>amount</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="stock in stocks">
+        <td>{{ stock.name }}</td>
+        <td>{{ stock.symbol }}</td>
+        <td>{{ stock.amount }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
