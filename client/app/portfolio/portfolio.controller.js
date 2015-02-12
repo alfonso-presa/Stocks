@@ -3,12 +3,18 @@
 angular.module('stocksApp')
   .controller('PortfolioCtrl', function ($scope, $resource) {
 
-    var stocksService = $resource('/api/portfolio/1/stocks');
+    var StocksService = $resource('/api/portfolio/1/stocks');
 
-    $scope.stocks = stocksService.query();
+    function createEditingStock() {
+      $scope.stock = new StocksService();
+      $scope.stock.name = '';
+      $scope.stock.symbol = '';
+      $scope.stock.amount = 0;
+    }
+
+    $scope.stocks = StocksService.query();
 
     createEditingStock();
-
 
     $scope.saveStock = function() {
       $scope.stock.$save(function() {
@@ -17,10 +23,4 @@ angular.module('stocksApp')
       });
     };
 
-    function createEditingStock() {
-      $scope.stock = new stocksService();
-      $scope.stock.name = '';
-      $scope.stock.symbol = '';
-      $scope.stock.amount = 0;
-    }
   });
