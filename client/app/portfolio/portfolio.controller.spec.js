@@ -16,7 +16,7 @@ describe('Controller: PortfolioCtrl', function () {
       .respond([
         {name: 'Santander', symbol: 'san', amount: 100},
         {name: 'Telefonica', symbol: 'tel', amount: 150},
-        {name: 'L'Oreal', symbol: 'lor', amount: 200},
+        {name: 'L\'Oreal', symbol: 'lor', amount: 200},
       ]);
 
     scope = $rootScope.$new();
